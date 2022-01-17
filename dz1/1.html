@@ -23,7 +23,7 @@
   "use strict";
 
   const tempC = prompt('ввести температуру в градусах Цельсия');
-  const tempF = (9 / 5) * tempC + 32;
+  const tempF = Math.round((9 / 5) * tempC + 32);
 
   alert(`Цельсий: ${tempC}, Фаренгейт: ${tempF}`);
 
