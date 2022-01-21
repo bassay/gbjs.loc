@@ -33,6 +33,77 @@ Infinity делать не нужно, однако, в случае если б
   "use strict";
 
   // Здесь пишем решение, данный комментарий необходимо стереть.
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @param {number} operation - Строка, оператор
+   * @description Функция с оператором и мат. функц. в операторе
+   */
+
+  function mathOperation(a, b, operation){
+    switch (operation){
+      case '+' : 
+        return getSum(a, b);
+      case '-' : 
+        return getDifference(a, b);
+      case '*' : 
+        return getMultiplication(a, b);
+      case '/' : 
+        return getdDivision(a, b);
+      default:
+        return NaN;
+    }
+  }
+
+  
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Разность двух чисел большего из меньшего
+   */
+
+   function getDifference (a, b) { 
+    if (a > b ) {
+      return a - b;
+    } else {
+      return b - a;
+    }
+  } 
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Умножение двух чисел
+   */
+  function getMultiplication (a, b) { 
+    return a * b;
+  }
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Сумма двух чисел
+   */
+  function getSum (a, b) {
+    return a + b;
+  }
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Деление двух чисел, b не может быть 0 
+   */
+  function getdDivision (a, b) {  
+    if (b != 0) {
+      return a / b;
+      // return Math.trunc(a / b); // с округлением 
+    }
+  } 
+
+
+  console.log( mathOperation(5, 3, '+') );
+  console.log( mathOperation(5, 3, ':)') );
 </script>
 </body>
 </html>
