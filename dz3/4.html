@@ -60,12 +60,19 @@
 
   
   // https://learn.javascript.ru/array-methods
-  
-  let sortArray = products.price?.sort(function(a, b){
+  function sortArr(a, b){
     if (a > b)  return 1;
     if (a == b) return 0;
     if (a < b)  return -1;
+  }
+
+
+  let sortArray = products.sort(function(product1, product2){
+    if (product1.price > product2.price) return 1;
+    if (product1.price < product2.price) return -1;
+    return 0;
   });
+
 
   console.log(sortArray);
 
