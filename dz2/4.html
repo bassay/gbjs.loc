@@ -32,6 +32,57 @@
   "use strict";
 
   // Здесь пишем решение, данный комментарий необходимо стереть.
+
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Разность двух чисел большего из меньшего
+   */
+
+  function getDifference (a, b) { 
+    if (a > b ) {
+      return a - b;
+    } else {
+      return b - a;
+    }
+  } 
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Умножение двух чисел
+   */
+  function getMultiplication (a, b) { 
+    return a * b;
+  }
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Сумма двух чисел
+   */
+  function getSum (a, b) {
+    return a + b;
+  }
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Деление двух чисел, b не может быть 0 
+   */
+  function getdDivision (a, b) {  
+    if (b != 0) {
+      return a / b;
+      // return Math.trunc(a / b); // с округлением 
+    }
+  } 
+
+  console.log(getDifference(4, 2));
+  console.log(getMultiplication(4, 2));
+  console.log(getSum(4, 2));
+  console.log(getdDivision(100, 5));
+
 </script>
 </body>
 </html>

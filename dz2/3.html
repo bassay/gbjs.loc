@@ -22,6 +22,17 @@
   "use strict";
 
   // Здесь пишем решение, данный комментарий необходимо стереть.
+
+  const a =  +prompt("первое число");
+  const b =  +prompt("второе число");
+
+  if (a > 0 && b > 0) {
+    console.log(a - b);
+  } else if (a < 0 && 0 > b){
+    console.log(a + b);
+  } else if ((a > 0 && b < 0) ||  (a < 0 && b > 0)) {
+    console.log(a + b);
+  }
 </script>
 </body>
 </html>
