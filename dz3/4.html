@@ -44,6 +44,33 @@
     },
   ];
 
+
+  // !!!! мой вариант, я не смог решить, буду смотреть решение
+  let searchArrPhotos = products.filter(function(item){
+    return item.photos?.length > 0; // добавил "?" и заработало!
+  });
+
+  // console.log(searchArrPhotos);
+  
+  // Ваше решение 
+  // console.log(products.filter(
+  //   product => "photos" in product && product.photos.length !== 0
+  // ));
+
+
+  
+  // https://learn.javascript.ru/array-methods
+  
+  let sortArray = products.price?.sort(function(a, b){
+    if (a > b)  return 1;
+    if (a == b) return 0;
+    if (a < b)  return -1;
+  });
+
+  console.log(sortArray);
+
+
+
   // Здесь пишем решение, данный комментарий необходимо стереть.
 </script>
 </body>
