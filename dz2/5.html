@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  // Здесь пишем решение, данный комментарий необходимо стереть.
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @param {number} operation - Строка, оператор
+   * @description Функция с оператором и мат. функц. в операторе
+   */
+
+  function mathOperation(a, b, operation){
+    switch (operation){
+      case '+' : 
+        return getSum(a, b);
+      case '-' : 
+        return getDifference(a, b);
+      case '*' : 
+        return getMultiplication(a, b);
+      case '/' : 
+        return getdDivision(a, b);
+      default:
+        return NaN;
+    }
+  }
+
+  
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Разность двух чисел большего из меньшего
+   */
+
+   function getDifference (a, b) { 
+    if (a > b ) {
+      return a - b;
+    } else {
+      return b - a;
+    }
+  } 
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Умножение двух чисел
+   */
+  function getMultiplication (a, b) { 
+    return a * b;
+  }
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Сумма двух чисел
+   */
+  function getSum (a, b) {
+    return a + b;
+  }
+
+  /**
+   * @param {number} a - Первое число
+   * @param {number} b - Второе число
+   * @description Деление двух чисел, b не может быть 0 
+   */
+  function getdDivision (a, b) {  
+    if (b != 0) {
+      return a / b;
+      // return Math.trunc(a / b); // с округлением 
+    }
+  } 
+
+
+  console.log( mathOperation(5, 3, '+') );
+  console.log( mathOperation(5, 3, ':)') );
+</script>
+</body>
+</html>

@@ -28,7 +28,17 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  const num = 4567;
+
+  //const num = Number.parseInt(prompt("Введите число до 1000"));
+
+  const v100  =  Math.trunc((num /100) % 10 );
+  const v10   =  Math.trunc((num / 10) % 10);
+  const v1    =  Math.trunc(num % 10);
+
+  // поправил ДЗ 
+
+  console.log(`В числе ${num} количество сотен: ${v100}, десятков: ${v10}, единиц: ${v1}`);
 </script>
 </body>
 </html>
