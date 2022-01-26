@@ -34,38 +34,12 @@
   class MyNumder {
     constructor(num) {
       this.num      = num;
-      // this.units    = units;
-      // this.dozens   = dozens;
-      // this.hundreds = hundreds;
       this.hundreds = Math.trunc((this.num / 100) % 10);
       this.dozens   = Math.trunc((this.num / 10) % 10);
       this.units    = Math.trunc(this.num % 10);
-      
-
     }
-
-    // getUnits(num){
-    //   this.units = Math.trunc(this.num % 10);
-    // }
-    // getDozens(num){
-    //   this.dozens = Math.trunc((this.num / 10) % 10);
-    // }
-    // getHugdreds(num){
-    //   this.hundreds = Math.trunc((this.num / 100) % 10);
-    // }
-
   }
-  // Код рабочий, возращает текст
-  // function getDigitsOfNumber(num){
-  //   if(num > 0 && num < 1000){
-  //     const myNum = new MyNumder(num);
-  //     console.log("Сотен " + myNum.getHugdreds());
-  //     console.log("Десятков " + myNum.getDozens());
-  //     console.log("Единиц " + myNum.getUnits());
-  //   } else {
-  //     console.error('Неверное число! Можно от нуля до 999 включительно');
-  //   }
-  // }
+
 
   function getDigitsOfNumber(num){
     if(num > 0 && num < 1000){
