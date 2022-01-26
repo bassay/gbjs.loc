@@ -50,7 +50,109 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  function PostES5(name, text){
+    this.name = name;
+    this.text = text;
+    this.editDate = Date.now();
+  }
+  PostES5.prototype.edit = function (text) {
+    this.text = text;
+    this.editDate = Date.now();
+  };
+
+  function AttachedPostES5(name, text) {
+    PostES5.call(this, name, text);
+    this.highlighted = false;
+  }
+
+  AttachedPostES5.prototype = Object.create(PostES5.prototype);
+  AttachedPostES5.prototype.constructor = AttachedPostES5;
+
+  AttachedPostES5.prototype.makeTextHighlighted = function () {
+    if(this.highlighted === false){
+      this.highlighted = true;
+    }else {
+      this.highlighted = false;
+    }
+  };
+
+
+  /*
+  Код es6
+  */
+  class PostES6 {
+    constructor(name, text) {
+      this.name = name;
+      this.text = text;
+      this.editDate = Date.now();
+    }
+
+    edit(text){
+      this.text = text;
+      this.editDate = Date.now();
+    }
+  }
+
+  class AttachedPostES6 extends PostES6 {
+    constructor(name, text) {
+      super(name, text);
+      this.highlighted = false;
+    }
+    makeTextHighlighted(){
+      if(this.highlighted === false){
+        this.highlighted = true;
+      }else {
+        this.highlighted = false;
+      }
+    }
+  }
+
+
+  // Код тестов ниже 
+
+  // Создаем объект es5 
+  const es5 = new PostES5("Имя", "Текст поста")
+  console.log(es5);
+
+  // Метод объекта es5
+  es5.edit('Новый текст');
+  console.log(es5);
+
+  console.log("-------------Раделитель------------");
+
+  // создаем объект еs6
+  const es6 = new PostES6("Имя ЕС6", "Текст для ЕС 6") 
+  console.log(es6);
+
+  // Метод объекта  es6 
+  es6.edit("Новый Текст для ЕС 6");
+  console.log(es6);
+
+  console.log("-------------Раделитель для наследуемого класса------------");
+
+  // Создаем объект наследуемого класса es5
+  const es5AttachedPost = new AttachedPostES5 (
+    'новый прикрепленный пост',
+    "текст нового прикрепленного поста"
+    );
+  console.log(es5AttachedPost);
+
+  // Метод наследуемого класса es5
+  es5AttachedPost.makeTextHighlighted();
+  console.log(es5AttachedPost);
+
+  console.log("-------------Раделитель------------");
+
+  // Создаем объект es6 наследуемый 
+  const es6AttachedPost = new AttachedPostES6(
+    'новый прикрепленный пост ес 6',
+    "текст нового прикрепленного поста  ес 6"
+    );
+  console.log(es6AttachedPost);
+
+  // Метод у наслдуемого объекта
+  es6AttachedPost.makeTextHighlighted();
+  console.log(es6AttachedPost);
 </script>
 </body>
 </html>
