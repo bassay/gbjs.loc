@@ -32,10 +32,15 @@
   const percent = 15; // процент 
 
   products.forEach(function(item) {
-    let currentPrice = +item.price;
+    let currentPrice = item.price;
     console.log(currentPrice - (currentPrice / 100 * percent));
+
+    // правки по дз после проверки
+    // нужно вникнуть 
+    currentPrice = currentPrice - (currentPrice / 100 * percent);
   });
 
+  console.log(products);
     
 </script>
 </body>
