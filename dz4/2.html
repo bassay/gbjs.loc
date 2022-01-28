@@ -50,11 +50,15 @@
 <script>
   "use strict";
 
+  /*
+  Код es5
+  */
   function PostES5(name, text){
     this.name = name;
     this.text = text;
     this.editDate = Date.now();
   }
+
   PostES5.prototype.edit = function (text) {
     this.text = text;
     this.editDate = Date.now();
@@ -98,7 +102,7 @@
       super(name, text);
       this.highlighted = false;
     }
-    makeTextHighlighted(){
+    makeTextHighlighted() {
       if(this.highlighted === false){
         this.highlighted = true;
       }else {
@@ -150,7 +154,7 @@
     );
   console.log(es6AttachedPost);
 
-  // Метод у наслдуемого объекта
+  // Метод у наследуемого объекта
   es6AttachedPost.makeTextHighlighted();
   console.log(es6AttachedPost);
 </script>

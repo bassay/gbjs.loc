@@ -34,19 +34,22 @@
   class MyNumder {
     constructor(num) {
       this.num      = num;
-      this.hundreds = Math.trunc((this.num / 100) % 10);
-      this.dozens   = Math.trunc((this.num / 10) % 10);
-      this.units    = Math.trunc(this.num % 10);
+      this.hundreds = Math.trunc(( this.num / 100 ) % 10 );
+      this.dozens   = Math.trunc(( this.num / 10) % 10 );
+      this.units    = Math.trunc( this.num % 10 );
     }
   }
 
 
-  function getDigitsOfNumber(num){
-    if(num > 0 && num < 1000){
-      const newObj = new MyNumder(num);
-      return newObj;
-    } else {
-      console.error('Неверное число! Можно от нуля до 999 включительно');
+  function getDigitsOfNumber(num) {
+    if ( Number.isInteger(num) ) {
+      if( num > 0 && num < 1000 ) {
+        const newObj = new MyNumder(num);
+        return newObj;
+      } else {
+        console.error('Неверное число! Можно от нуля до 999 включительно');
+        return new MyNumder();
+      }
     }
   }
 

@@ -28,7 +28,6 @@
 
   ProductES5.prototype.make25Discount = function () {
     this.price = this.price - (this.price / 100 * 25);
-    console.log(this.price);
   };
   // пример
   const es5 = new ProductES5("prod", 100);
@@ -43,7 +42,6 @@
     }
     make25Discount() {
       this.price = this.price - (this.price / 100 * 25);
-      console.log(this.price);
     }
   }
 
