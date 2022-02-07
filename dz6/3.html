@@ -1,57 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <style>
     i {
       font-size: 50px;
     }
+
     .golden {
       color: gold;
     }
   </style>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
 стирать, код с решением задачи пишем под комментарием.
 -->
 
-<div class="stars_container">
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-</div>
+  <div class="stars_container">
+    <i class="fas fa-star" data-num="1"></i>
+    <i class="fas fa-star" data-num="2"></i>
+    <i class="fas fa-star" data-num="3"></i>
+    <i class="fas fa-star" data-num="4"></i>
+    <i class="fas fa-star" data-num="5"></i>
+  </div>
 
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  /*
-  1. При наведении на любую из звезд, данной звезде должен ставиться класс
-  golden, также такой класс должен ставиться всем звездам до нее слева.
-  */
+    /*
+    1. При наведении на любую из звезд, данной звезде должен ставиться класс
+    golden, также такой класс должен ставиться всем звездам до нее слева.
+    */
+
+    /* 
+    Решить не смог, есть решения в сети 
+    Так же подсморел ваш код, с кодом разобрался 
+    http://code.mu/ru/javascript/manual/dom/previousElementSibling/
+    почитал previousElementSibling
+
+    Далее будт попытки мое кода... 
+    Ваш код копировать не стал!
+    
+    */
+
+    // const starEls = document.querySelectorAll('.fas');
+    // starEls.forEach(el => {
+    //   el.addEventListener('mouseover', event => {
+    //     event.target.classList.add('golden');
+    //   });
+    //   el.addEventListener('mouseout', event => {
+    //     event.target.classList.remove('golden');
+    //   });
+    // });
+
+    // const fasEls = document.querySelectorAll('.fas');
+    // const starContainer = document.querySelector('.stars_container');
+
+    // starContainer.addEventListener('mouseover', event => {
+    //   // 
+
+    //   if (event.target.classList.contains('fas')) {
+    //     for (let i = 0; i < fasEls.length; i++) {
+    //       // event.target.classList.add('golden');
+
+    //       // fasEls[i].classList.add('golden');
+
+    //     }
+    //   }
 
 
-  /*
-  2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
-  задания должны быть удалены.
-   */
+    // });
 
 
-  /*
-  3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
-  звезды (временно могут становиться черными). Почему так? Напишите словами.
-  Можем ли мы это исправить? Если да, то предложите решение.
-  */
+
+    /*
+    2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
+    задания должны быть удалены.
+     */
 
 
-</script>
+    /*
+    3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
+    звезды (временно могут становиться черными). Почему так? Напишите словами.
+    Можем ли мы это исправить? Если да, то предложите решение.
+    */
+
+
+  </script>
 </body>
+
 </html>
