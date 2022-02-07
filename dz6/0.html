@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    фывфыв
+    <script>
+        'use strict'
+
+        // document.addEventListener('click', () => console.log('re'));
+
+
+        // addEventListener('cliсk', () => console.log('ку'));
+
+        const str2 = "1234567890";
+
+        function myCrypt(str = '123456') {
+            const arr = str.split('');
+            // console.log(arr);
+            let newStr = '';
+            let num = '';
+            for (let i = 0; i < arr.length; i++) {
+                num = +arr[i] + 5;
+                if (num >= 10) {
+                    num = num - 10;
+                }
+                num = String(num);
+
+                newStr = newStr + num;
+            }
+            return newStr;
+        }
+
+
+        console.log(
+            myCrypt(str2)
+        );
+
+    </script>
+
+</body>
+
+</html>
