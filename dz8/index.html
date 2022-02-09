@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,9 +25,31 @@
 
                 <span class="cartIconWrap">
                     <img class="cartIcon" src="images/cart.png" alt="">
-                    <span>5</span>
+                    <span class="hidden">0</span>
                 </span>
+
+                <!-- код корзины  -->
+                <!-- <div class="basket hidden"> -->
+                <div class="basket hidden">
+                    <div class="basketRow basketHeader">
+                        <div>Название товара</div>
+                        <div>Количество</div>
+                        <div>Цена за шт.</div>
+                        <div>Итого</div>
+                    </div>
+
+                    <div class="basketRow basketRowTable">
+                    </div>
+
+                    <div class="basketTotal">
+                        Товаров в корзине на сумму:
+                        $<span class="basketTotalValue">0</span>
+                    </div>
+                </div>
+                <!-- код корзины  -->
+
             </div>
+
         </div>
     </div>
 
@@ -137,12 +161,12 @@
 
         <div class="featuredItems">
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="1" data-name="Product 1" data-price="52">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/1.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="addToCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -154,7 +178,8 @@
                         ELLERY X M'O CAPSULE
                     </div>
                     <div class="featuredText">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                        Ellery
                         teams
                         up with Moda Operandi.
                     </div>
@@ -165,12 +190,12 @@
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="2" data-name="Product 2" data-price="53">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/2.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="addToCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -182,7 +207,8 @@
                         ELLERY X M'O CAPSULE
                     </div>
                     <div class="featuredText">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                        Ellery
                         teams
                         up with Moda Operandi.
                     </div>
@@ -193,12 +219,12 @@
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="3" data-name="Product 3" data-price="54">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/3.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="addToCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -210,7 +236,8 @@
                         ELLERY X M'O CAPSULE
                     </div>
                     <div class="featuredText">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                        Ellery
                         teams
                         up with Moda Operandi.
                     </div>
@@ -221,12 +248,12 @@
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="4" data-name="Product 4" data-price="55">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/4.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="addToCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -238,7 +265,8 @@
                         ELLERY X M'O CAPSULE
                     </div>
                     <div class="featuredText">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                        Ellery
                         teams
                         up with Moda Operandi.
                     </div>
@@ -249,12 +277,12 @@
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="5" data-name="Product 5" data-price="56">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/5.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="addToCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -266,7 +294,8 @@
                         ELLERY X M'O CAPSULE
                     </div>
                     <div class="featuredText">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                        Ellery
                         teams
                         up with Moda Operandi.
                     </div>
@@ -276,12 +305,12 @@
                 </div>
 
             </div>
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="6" data-name="Product 6" data-price="57">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/6.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="addToCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -293,7 +322,8 @@
                         ELLERY X M'O CAPSULE
                     </div>
                     <div class="featuredText">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                        Ellery
                         teams
                         up with Moda Operandi.
                     </div>
@@ -330,7 +360,8 @@
                     Free Delivery
                 </div>
                 <div class="servicesText">
-                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                    models.
                 </div>
             </div>
 
@@ -340,7 +371,8 @@
                     Sales & discounts
                 </div>
                 <div class="servicesText">
-                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                    models.
                 </div>
             </div>
 
@@ -350,7 +382,8 @@
                     Quality assurance
                 </div>
                 <div class="servicesText">
-                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                    models.
                 </div>
             </div>
         </div>
@@ -399,12 +432,14 @@
                 </a>
             </div>
             <div class="footerRight">
-                &copy; 2021  Brand  All Rights Reserved.
+                &copy; 2021 Brand All Rights Reserved.
             </div>
         </div>
     </div>
 
+
     <script src="app.js"></script>
+    <script defer src="basket.js"></script>
 </body>
 
 </html>
