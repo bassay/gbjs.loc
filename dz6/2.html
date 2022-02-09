@@ -105,7 +105,6 @@
     const formControlEls = document.querySelector('.form-control');
 
     formEl.addEventListener('submit', event => {
-
       if (inputFormEl.value === '') {
         console.log('inputFormEl пустой');
         inputFormEl.classList.add('error');
@@ -116,9 +115,7 @@
         selectFormEl.classList.add('error');
         event.preventDefault();
       }
-
     });
-
 
     // подсмотренно
     formEl.addEventListener('input', event => {
